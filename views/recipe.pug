@@ -1,0 +1,27 @@
+extends index.pug
+
+block content
+    <div class="recipe">
+        <h1 style="text-align: center;">Search Results : #{q}</h1><br>
+            <div class="recipe-header">
+                each val in data.hits
+                    h1= val.recipe.label
+                    <img src="#{val.recipe.image}" alt="">
+                    <h2>Ingredients</h2>
+                    li= val.recipe.ingredientLines
+                    <h2>Neutritions</h2>
+                    table
+                        thead
+                            tr
+                                th Nutrient
+                                th Amount
+                        tbody
+                            each e in val.recipe.totalNutrients
+                                tr
+                                    td= e.label
+                                    td= e.quantity + " " + e.unit
+                    
+                    <br>
+                    <a href="#{val.recipe.url}" target="blank">View More</a>
+                    <hr>
+            </div>

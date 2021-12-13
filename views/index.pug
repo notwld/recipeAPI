@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    style
+        include ../static/style.css
+</head>
+<body>
+    <div>
+       <div class="head_container">
+           <h4><a href="/">OwO Recipies</a></h4>
+           <nav>
+               <ul>
+               <a href="#"><li>github</li></a>
+               <a href="#" onmouseover="document.getElementsByClassName(`model`)[0].style.visibility= `visible`;" onmouseleave="document.getElementsByClassName(`model`)[0].style.visibility=`hidden`;"><li>about</li></a>
+                </ul>
+           </nav>
+       </div>
+    </div>
+    <div>
+        <div class="home_container">
+            
+            <form action="/recipe" method="post">
+                
+                <input type="text" name="search" placeholder="Enter dish u like, perhaps?">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <div>
+        block content
+    </div>
+    <div class="model">
+        <div class="about">
+            <h1>About</h1>
+            <span>well who made this?</span><br>
+            <img src="https://memes.co.in/memes/update/uploads/2021/04/e7f2b28-1-448x450.png" alt="" height="100px" width="100px">
+            <span>ver 1.0</span>
+        </div>
+    </div>
+</body>
+</html>
